@@ -60,7 +60,7 @@ setuptools.setup(
     maintainer="Philip May",
     author="Philip May",
     author_email="philip.may@t-systems.com",
-    description="Tools for lazy imports",
+    description="Tool to support lazy imports",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=source_code,

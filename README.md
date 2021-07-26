@@ -1,5 +1,7 @@
 # Lazy-Imports
 
+This is a Python tool to support lazy imports.
+
 [![One Conversation](https://raw.githubusercontent.com/telekom/lazy-imports/main/docs/source/imgs/1c-logo.png)](https://www.welove.ai/)
 <br/>
 This project is maintained by the [One Conversation](https://www.welove.ai/)
