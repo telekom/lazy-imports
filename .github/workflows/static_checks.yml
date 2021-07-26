@@ -1,0 +1,47 @@
+name: Static Code Checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  checks:
+    env:
+      src: "lazy_imports"
+      other-src: "tests setup.py"
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+
+    - name: Install
+      run: |
+        python -m pip install -U pip
+        pip install --progress-bar off -U .[checking,optional]
+
+    - name: Check with black
+      run: black ${{ env.src }} ${{ env.other-src }} --check --diff
+
+    - name: Check with flake8
+      run: flake8 ${{ env.src }} ${{ env.other-src }}
+
+    - name: Check with isort
+      run: isort ${{ env.src }} ${{ env.other-src }} --check --diff
+
+    - name: Check with mdformat
+      run: mdformat --check *.md
+
+    - name: Check with pydocstyle
+      run: pydocstyle --count ${{ env.src }} ${{ env.other-src }}
+
+    - name: Check with mypy
+      run: mypy ${{ env.src }} ${{ env.other-src }}
+
+    - name: Check with pylint
+      run: pylint ${{ env.src }}
