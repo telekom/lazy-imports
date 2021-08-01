@@ -4,6 +4,7 @@
 [![Python Version](https://img.shields.io/pypi/pyversions/lazy-imports)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/lazy-imports.svg)](https://pypi.python.org/pypi/lazy-imports)
 <br/>
+[![pytest](https://github.com/telekom/lazy-imports/actions/workflows/pytest.yml/badge.svg)](https://github.com/telekom/lazy-imports/actions/workflows/pytest.yml)
 [![Static Code Checks](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml/badge.svg)](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml)
 
 This is a Python tool to support lazy imports.
