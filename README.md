@@ -80,6 +80,22 @@ else:
     )
 ```
 
+## Support and Feedback
+
+The following channels are available for discussions, feedback, and support requests:
+
+- [open an issue in our GitHub repository](https://github.com/telekom/lazy-imports/issues/new/choose)
+- [send an e-mail to our open source team](mailto:opensource@telekom.de)
+
+## Working Language
+
+We decided to apply _English_ as the primary project language.
+
+Consequently, all content will be made available primarily in English. We also ask all interested
+people to use English as language to create issues, in their code (comments, documentation etc.) and
+when you send requests to us. The application itself and all end-user facing content will be made
+available in other languages as needed.
+
 ## Licensing
 
 Copyright (c) 2021 Philip May, Deutsche Telekom AG<br/>
