@@ -18,4 +18,4 @@ Versioning follows the `Semantic Versioning Specification <https://semver.org/>`
 `PEP 440 -- Version Identification and Dependency Specification <https://www.python.org/dev/peps/pep-0440/>`__.  # noqa: E501
 """
 
-__version__ = "0.0.1.dev9"
+__version__ = "0.1.0"
