@@ -3,6 +3,8 @@
 [![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
 [![Python Version](https://img.shields.io/pypi/pyversions/lazy-imports)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/lazy-imports.svg)](https://pypi.python.org/pypi/lazy-imports)
+<br/>
+[![Static Code Checks](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml/badge.svg)](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml)
 
 This is a Python tool to support lazy imports.
 
