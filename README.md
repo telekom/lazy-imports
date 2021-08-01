@@ -29,6 +29,53 @@ It can be installed with _pip_:
 $ pip install lazy-imports
 ```
 
+## Usage & Example
+
+A good and easy to understand example of how to use Lazy-Imports can be found in the 
+[`__init__.py` file of the HPOflow package](https://github.com/telekom/HPOflow/blob/1b26f3b86cad607dd89a31fa9135256d956948cb/hpoflow/__init__.py).
+It is printed here:
+
+```python
+import sys
+from typing import TYPE_CHECKING
+
+from lazy_imports import LazyImporter
+
+from hpoflow.version import __version__
+
+
+_import_structure = {
+    "mlflow": [
+        "normalize_mlflow_entry_name",
+        "normalize_mlflow_entry_names_in_dict",
+        "check_repo_is_dirty",
+    ],
+    "optuna": ["SignificanceRepeatedTrainingPruner"],
+    "optuna_mlflow": ["OptunaMLflow"],
+    "optuna_transformers": ["OptunaMLflowCallback"],
+    "utils": ["func_no_exception_caller"],
+}
+
+# Direct imports for type-checking
+if TYPE_CHECKING:
+    from hpoflow.mlflow import (  # noqa: F401
+        check_repo_is_dirty,
+        normalize_mlflow_entry_name,
+        normalize_mlflow_entry_names_in_dict,
+    )
+    from hpoflow.optuna import SignificanceRepeatedTrainingPruner  # noqa: F401
+    from hpoflow.optuna_mlflow import OptunaMLflow  # noqa: F401
+    from hpoflow.optuna_transformers import OptunaMLflowCallback  # noqa: F401
+    from hpoflow.utils import func_no_exception_caller  # noqa: F401
+else:
+    sys.modules[__name__] = LazyImporter(
+        __name__,
+        globals()["__file__"],
+        _import_structure,
+        extra_objects={"__version__": __version__},
+    )
+```
+
 ## Licensing
 
 Copyright (c) 2021 Philip May, Deutsche Telekom AG<br/>
