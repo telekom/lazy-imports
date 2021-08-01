@@ -1,6 +1,8 @@
 # Lazy-Imports
 
 [![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/lazy-imports)](https://www.python.org)
+[![pypi](https://img.shields.io/pypi/v/lazy-imports.svg)](https://pypi.python.org/pypi/lazy-imports)
 
 This is a Python tool to support lazy imports.
 
