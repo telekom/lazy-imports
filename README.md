@@ -12,6 +12,15 @@ from the [HuggingFace](https://huggingface.co/) team. Many thanks for
 [your consent](https://github.com/huggingface/transformers/issues/12861#issuecomment-886712209)
 to publish it as a standalone package 🤗 ♥.
 
+## Installation
+
+Lazy-Imports is available at [the Python Package Index (PyPI)](https://pypi.org/project/lazy-imports/).
+It can be installed with _pip_:
+
+```bash
+$ pip install lazy-imports
+```
+
 ## Licensing
 
 Copyright (c) 2021 Philip May, Deutsche Telekom AG<br/>
