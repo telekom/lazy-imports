@@ -20,6 +20,3 @@ format:
 
 test:
 	pytest $(test-src)
-
-sphinx:
-	cd docs && $(MAKE) clean html && cd ..
