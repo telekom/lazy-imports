@@ -1,5 +1,7 @@
 # Lazy-Imports
 
+[![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
+
 This is a Python tool to support lazy imports.
 
 [![One Conversation](https://raw.githubusercontent.com/telekom/lazy-imports/main/docs/source/imgs/1c-logo.png)](https://www.welove.ai/)
