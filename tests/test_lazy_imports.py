@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import pytest
+
 from lazy_imports import LazyImporter, __version__
 
 
-def test_sinple_case():
+def test_sinple_case() -> None:
     _import_structure = {
         "lazy_imports": ["LazyImporter"],
     }
@@ -36,3 +38,18 @@ def test_sinple_case():
     assert "_import_structure" in lazy_importer_dir
 
     assert lazy_importer.__version__ == __version__
+
+
+def test_imports() -> None:
+    import test_package
+    import test_package.module_a
+    from test_package import func_of_module_a
+    from test_package.module_a import func_of_module_a  # noqa: F811
+
+    assert func_of_module_a() == "func_of_module_a"
+
+    with pytest.raises(ModuleNotFoundError):
+        import test_package.module_b  # noqa: F401
+
+    with pytest.raises(ModuleNotFoundError):
+        from test_package import func_of_module_b  # noqa: F401
