@@ -9,6 +9,10 @@
 [![GitHub issues](https://img.shields.io/github/issues-raw/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/issues)
 
 This is a Python tool to support lazy imports.
+Likewise, the actual initialization of the module does not occur until usage time
+to postpone `ModuleNotFoundError`s to the time of the actual usage of the module.
+This is useful when using various optional dependencies which might not all be
+installed or which have high load times and/or ressource consumption.
 
 [![One Conversation](https://raw.githubusercontent.com/telekom/lazy-imports/main/docs/source/imgs/1c-logo.png)](https://www.welove.ai/)
 <br/>
@@ -31,7 +35,7 @@ $ pip install lazy-imports
 
 ## Usage & Example
 
-A good and easy to understand example of how to use Lazy-Imports can be found in the 
+A good and easy to understand example of how to use Lazy-Imports can be found in the
 [`__init__.py` file of the HPOflow package](https://github.com/telekom/HPOflow/blob/1b26f3b86cad607dd89a31fa9135256d956948cb/hpoflow/__init__.py).
 It is printed here:
 
