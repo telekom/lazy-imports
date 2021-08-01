@@ -36,7 +36,6 @@ extras_require = {
         "pylintfileheader",
     ],
     "testing": ["pytest"],
-    # "doc": ["sphinx", "sphinx_rtd_theme", "myst_parser", "sphinx_copybutton"],
 }
 
 
@@ -65,10 +64,7 @@ setuptools.setup(
     url=source_code,
     project_urls={
         "Bug Tracker": source_code + "/issues",
-        # "Documentation": "https://telekom.github.io/lazy-imports/",
         "Source Code": source_code,
-        "Contributing": source_code + "/blob/main/CONTRIBUTING.md",
-        "Code of Conduct": source_code + "/blob/main/CODE_OF_CONDUCT.md",
     },
     packages=setuptools.find_packages(),
     python_requires=">=3.6",
@@ -76,8 +72,8 @@ setuptools.setup(
     extras_require=extras_require,
     keywords=keywords,
     classifiers=[
-        "Development Status :: 3 - Alpha",
-        # "Development Status :: 4 - Beta",
+        # "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         # "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: Apache Software License",
@@ -87,7 +83,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3 :: Only",
-        "Topic :: Scientific/Engineering",
         "Topic :: Software Development",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
