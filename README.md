@@ -105,7 +105,6 @@ defers the exceptions until you actually need to use the package.
 You can see an example below:
 
 ```python
-import abc
 from lazy_imports import try_import
 
 with try_import() as optional_package_import:  # use try_import as a context manager 
