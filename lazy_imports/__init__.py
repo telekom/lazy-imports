@@ -16,7 +16,10 @@
 
 from lazy_imports.lazy_imports import LazyImporter
 from lazy_imports.try_import import try_import
-from lazy_imports.version import __version__
 
+
+# Versioning follows the `Semantic Versioning Specification <https://semver.org/>`__ and
+# `PEP 440 -- Version Identification and Dependency Specification <https://www.python.org/dev/peps/pep-0440/>`__.  # noqa: E501
+__version__ = "0.1.1rc1"
 
 __all__ = ["LazyImporter", "try_import", "__version__"]

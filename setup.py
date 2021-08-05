@@ -40,8 +40,8 @@ extras_require = {
 
 
 def get_version():
-    """Read version from ``version.py``."""
-    version_filepath = os.path.join(os.path.dirname(__file__), project_name, "version.py")
+    """Read version from ``__init__.py``."""
+    version_filepath = os.path.join(os.path.dirname(__file__), project_name, "__init__.py")
     with open(version_filepath) as f:
         for line in f:
             if line.startswith("__version__"):
