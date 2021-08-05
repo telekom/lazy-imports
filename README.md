@@ -98,6 +98,12 @@ else:
 
 ## Usage & Example for try_import
 
+`try_import` is a context manager that can wrap imports of optional packages to defer
+exceptions. This way you don't have to import the packages every time you call a function,
+but you can still import the package at the top of your module. The context manager
+defers the exceptions until you actually need to use the package.
+You can see an example below:
+
 ```python
 import abc
 from lazy_imports import try_import
