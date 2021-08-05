@@ -15,7 +15,8 @@
 """Lazy-Imports main package."""
 
 from lazy_imports.lazy_imports import LazyImporter
+from lazy_imports.try_import import try_import
 from lazy_imports.version import __version__
 
 
-__all__ = ["LazyImporter", "__version__"]
+__all__ = ["LazyImporter", "try_import", "__version__"]

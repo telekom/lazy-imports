@@ -13,7 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Lazy-Imports module."""
+"""Lazy-Imports module.
+
+This is code taken from the `HuggingFace team <https://huggingface.co/>`__.
+Many thanks to HuggingFace for
+`your consent <https://github.com/huggingface/transformers/issues/12861#issuecomment-886712209>`__
+to publish it as a standalone package.
+"""
 
 import importlib
 import os

@@ -20,8 +20,13 @@ This project is maintained by the [One Conversation](https://www.welove.ai/)
 team of [Deutsche Telekom AG](https://www.telekom.com/).
 It is based on
 [`_LazyModule`](https://github.com/huggingface/transformers/blob/e218249b02465ec8b6029f201f2503b9e3b61feb/src/transformers/file_utils.py#L1945)
-from the [HuggingFace](https://huggingface.co/) team. Many thanks for
+from the [HuggingFace](https://huggingface.co/) team and
+[`try_import()`](https://github.com/optuna/optuna/blob/1f92d496b0c4656645384e31539e4ee74992ff55/optuna/_imports.py#L89)
+from the [Optuna framework](https://optuna.readthedocs.io/).
+Many thanks to HuggingFace for
 [your consent](https://github.com/huggingface/transformers/issues/12861#issuecomment-886712209)
+and to Optuna for
+[your consent](https://github.com/optuna/optuna/issues/2776#issuecomment-874614137)
 to publish it as a standalone package 🤗 ♥.
 
 ## Installation
