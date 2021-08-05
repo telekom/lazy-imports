@@ -14,13 +14,24 @@ to postpone `ModuleNotFoundError`s to the time of the actual usage of the module
 This is useful when using various optional dependencies which might not all be
 installed or which have high load times and/or ressource consumption.
 
+## Table of Contents
+
+- [Maintainers](#maintainers)
+- [Installation](#installation)
+- [Usage & Example for LazyImporter](#usage--example-for-lazyimporter)
+- [Usage & Example for try_import](#usage--example-for-try_import)
+- [Support and Feedback](#support-and-feedback)
+- [Licensing](#licensing)
+
+## Maintainers
+
 [![One Conversation](https://raw.githubusercontent.com/telekom/lazy-imports/main/docs/source/imgs/1c-logo.png)](https://www.welove.ai/)
 <br/>
 This project is maintained by the [One Conversation](https://www.welove.ai/)
 team of [Deutsche Telekom AG](https://www.telekom.com/).
 It is based on
 [`_LazyModule`](https://github.com/huggingface/transformers/blob/e218249b02465ec8b6029f201f2503b9e3b61feb/src/transformers/file_utils.py#L1945)
-from the [HuggingFace](https://huggingface.co/) team and
+from [HuggingFace](https://huggingface.co/) and
 [`try_import()`](https://github.com/optuna/optuna/blob/1f92d496b0c4656645384e31539e4ee74992ff55/optuna/_imports.py#L89)
 from the [Optuna framework](https://optuna.readthedocs.io/).
 Many thanks to HuggingFace for
@@ -38,7 +49,7 @@ It can be installed with _pip_:
 $ pip install lazy-imports
 ```
 
-## Usage & Example
+## Usage & Example for LazyImporter
 
 A good and easy to understand example of how to use Lazy-Imports can be found in the
 [`__init__.py` file of the HPOflow package](https://github.com/telekom/HPOflow/blob/1b26f3b86cad607dd89a31fa9135256d956948cb/hpoflow/__init__.py).
@@ -85,21 +96,29 @@ else:
     )
 ```
 
+## Usage & Example for try_import
+
+```python
+import abc
+from lazy_imports import try_import
+
+with try_import() as optional_package_import:  # use try_import as a context manager 
+    import optional_package  # optional package that might not be installed
+
+# other non optional functions here    
+    
+def optional_function():  # optional function that uses the optional package
+    optional_package_import.check()  # check if the import was ok or raise a meaningful exception
+    
+    optional_package.some_external_function()  # use the optional package here
+```
+
 ## Support and Feedback
 
 The following channels are available for discussions, feedback, and support requests:
 
 - [open an issue in our GitHub repository](https://github.com/telekom/lazy-imports/issues/new/choose)
 - [send an e-mail to our open source team](mailto:opensource@telekom.de)
-
-## Working Language
-
-We decided to apply _English_ as the primary project language.
-
-Consequently, all content will be made available primarily in English. We also ask all interested
-people to use English as language to create issues, in their code (comments, documentation etc.) and
-when you send requests to us. The application itself and all end-user facing content will be made
-available in other languages as needed.
 
 ## Licensing
 
