@@ -128,7 +128,8 @@ The following channels are available for discussions, feedback, and support requ
 ## Licensing
 
 Copyright (c) 2021 Philip May, Deutsche Telekom AG<br/>
-Copyright (c) 2020, 2021 The HuggingFace Team
+Copyright (c) 2020, 2021 The HuggingFace Team<br/>
+Copyright (c) 2018 Preferred Networks, Inc.
 
 Licensed under the [Apache License, Version 2.0](https://github.com/telekom/lazy-imports/blob/main/LICENSE) (the "License");
 you may not use this file except in compliance with the License.
