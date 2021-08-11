@@ -35,6 +35,7 @@ extras_require = {
         "pylint",
         "pylintfileheader",
     ],
+    "optional": [],
     "testing": ["pytest", "packaging"],
 }
 
