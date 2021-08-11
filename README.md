@@ -1,6 +1,7 @@
 # Lazy-Imports
 
 [![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4.svg)](https://github.com/telekom/lazy-imports/blob/main/CODE_OF_CONDUCT.md)
 [![Python Version](https://img.shields.io/pypi/pyversions/lazy-imports)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/lazy-imports.svg)](https://pypi.python.org/pypi/lazy-imports)
 <br/>
@@ -18,9 +19,12 @@ installed or which have high load times and/or ressource consumption.
 
 - [Maintainers](#maintainers)
 - [Installation](#installation)
-- [Usage & Example for LazyImporter](#usage--example-for-lazyimporter)
-- [Usage & Example for try_import](#usage--example-for-try_import)
+- [Usage & Example for LazyImporter](#)
+- [Usage & Example for try_import](#)
 - [Support and Feedback](#support-and-feedback)
+- [Reporting Security Vulnerabilities](#reporting-security-vulnerabilities)
+- [Contribution](#contribution)
+- [Code of Conduct](#code-of-conduct)
 - [Licensing](#licensing)
 
 ## Maintainers
@@ -43,7 +47,7 @@ to publish it as a standalone package 🤗 ♥.
 ## Installation
 
 Lazy-Imports is available at [the Python Package Index (PyPI)](https://pypi.org/project/lazy-imports/).
-It can be installed with _pip_:
+It can be installed with pip:
 
 ```bash
 $ pip install lazy-imports
@@ -124,6 +128,35 @@ The following channels are available for discussions, feedback, and support requ
 
 - [open an issue in our GitHub repository](https://github.com/telekom/lazy-imports/issues/new/choose)
 - [send an e-mail to our open source team](mailto:opensource@telekom.de)
+
+## Reporting Security Vulnerabilities
+
+This project is built with security and data privacy in mind to ensure your data is safe.
+We are grateful for security researchers and users reporting a vulnerability to us, first.
+To ensure that your request is handled in a timely manner and non-disclosure of vulnerabilities
+can be assured, please follow the below guideline.
+
+**Please do not report security vulnerabilities directly on GitHub.
+GitHub Issues can be publicly seen and therefore would result in a direct disclosure.**
+
+Please address questions about data privacy, security concepts,
+and other media requests to the [opensource@telekom.de](mailto:opensource@telekom.de) mailbox.
+
+## Contribution
+
+Our commitment to open source means that we are enabling - in fact encouraging - all interested
+parties to contribute and become part of our developer community.
+
+Contribution and feedback is encouraged and always welcome. For more information about how to
+contribute, as well as additional contribution information, see our
+[Contribution Guidelines](https://github.com/telekom/lazy-imports/blob/main/CONTRIBUTING.md).
+
+## Code of Conduct
+
+This project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/)
+as our code of conduct. Please see the details in our
+[Contributor Covenant Code of Conduct](https://github.com/telekom/lazy-imports/blob/main/CODE_OF_CONDUCT.md).
+All contributors must abide by the code of conduct.
 
 ## Licensing
 
