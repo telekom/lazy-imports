@@ -19,8 +19,8 @@ installed or which have high load times and/or ressource consumption.
 
 - [Maintainers](#maintainers)
 - [Installation](#installation)
-- [Usage & Example for LazyImporter](#)
-- [Usage & Example for try_import](#)
+- [Usage & Example for LazyImporter](#usage--example-for-lazyimporter)
+- [Usage & Example for try_import](#usage--example-for-try_import)
 - [Support and Feedback](#support-and-feedback)
 - [Reporting Security Vulnerabilities](#reporting-security-vulnerabilities)
 - [Contribution](#contribution)
