@@ -66,6 +66,8 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": source_code + "/issues",
         "Source Code": source_code,
+        "Contributing": source_code + "/blob/main/CONTRIBUTING.md",
+        "Code of Conduct": source_code + "/blob/main/CODE_OF_CONDUCT.md",
     },
     packages=setuptools.find_packages(),
     python_requires=">=3.6",
