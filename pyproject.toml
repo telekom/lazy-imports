@@ -22,4 +22,5 @@ disable = [
     "broad-except",
     "too-few-public-methods",
     "arguments-differ",
+    "consider-using-f-string",
 ]
