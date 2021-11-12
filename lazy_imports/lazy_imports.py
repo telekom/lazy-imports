@@ -56,7 +56,7 @@ class LazyImporter(ModuleType):
             return self._objects[name]
         if name in self._modules:
             value = self._get_module(name)
-        elif name in self._class_to_module.keys():
+        elif name in self._class_to_module:
             module = self._get_module(self._class_to_module[name])
             value = getattr(module, name)
         else:
