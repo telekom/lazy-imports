@@ -35,9 +35,9 @@ extras_require = {
         "pylint",
         "pylintfileheader",
     ],
-    "optional": [],
     "testing": ["pytest", "packaging"],
 }
+extras_require["all"] = list({package_name for value in extras_require.values() for package_name in value})
 
 
 def get_version():
