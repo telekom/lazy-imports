@@ -111,14 +111,14 @@ You can see an example below:
 ```python
 from lazy_imports import try_import
 
-with try_import() as optional_package_import:  # use try_import as a context manager 
+with try_import() as optional_package_import:  # use try_import as a context manager
     import optional_package  # optional package that might not be installed
 
-# other non optional functions here    
-    
+# other non optional functions here
+
 def optional_function():  # optional function that uses the optional package
     optional_package_import.check()  # check if the import was ok or raise a meaningful exception
-    
+
     optional_package.some_external_function()  # use the optional package here
 ```
 
@@ -160,8 +160,8 @@ All contributors must abide by the code of conduct.
 
 ## Licensing
 
-Copyright (c) 2021 Philip May, Deutsche Telekom AG<br/>
-Copyright (c) 2020, 2021 The HuggingFace Team<br/>
+Copyright (c) 2021 [Philip May](https://may.la/), [Deutsche Telekom AG](https://www.telekom.com/)<br/>
+Copyright (c) 2020, 2021 [The HuggingFace Team](https://huggingface.co/)<br/>
 Copyright (c) 2018 Preferred Networks, Inc.
 
 Licensed under the [Apache License, Version 2.0](https://github.com/telekom/lazy-imports/blob/main/LICENSE) (the "License");
