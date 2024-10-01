@@ -24,7 +24,7 @@ to publish it as a standalone package.
 import importlib
 import os
 from types import ModuleType
-from typing import Any
+from typing import Any, Dict, List, Union
 
 
 class LazyImporter(ModuleType):
@@ -32,10 +32,16 @@ class LazyImporter(ModuleType):
 
     # Very heavily inspired by optuna.integration._IntegrationModule
     # https://github.com/optuna/optuna/blob/master/optuna/integration/__init__.py
-    def __init__(self, name, module_file, import_structure, extra_objects=None):
+    def __init__(
+        self,
+        name: str,
+        module_file: str,
+        import_structure: Dict[str, List[str]],
+        extra_objects: Union[Dict[str, Any], None] = None,
+    ):
         super().__init__(name)
         self._modules = set(import_structure.keys())
-        self._class_to_module = {}
+        self._class_to_module: Dict[str, str] = {}
         for key, values in import_structure.items():
             for value in values:
                 self._class_to_module[value] = key
