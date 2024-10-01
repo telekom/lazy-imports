@@ -45,11 +45,11 @@ class LazyImporter(ModuleType):
         for key, values in import_structure.items():
             for value in values:
                 self._class_to_module[value] = key
-        # Needed for autocompletion in an IDE
-        self.__all__ = list(import_structure.keys()) + sum(import_structure.values(), [])
+        self._objects = {} if extra_objects is None else extra_objects
+        # Needed for autocompletion in an IDE and wildcard imports (although those won't be lazy)
+        self.__all__ = list(import_structure.keys()) + sum(import_structure.values(), []) + list(self._objects.keys())
         self.__file__ = module_file
         self.__path__ = [os.path.dirname(module_file)]
-        self._objects = {} if extra_objects is None else extra_objects
         self._name = name
         self._import_structure = import_structure
 
