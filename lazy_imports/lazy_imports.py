@@ -55,7 +55,7 @@ class LazyImporter(ModuleType):
 
     # Needed for autocompletion in an IDE
     def __dir__(self):
-        return super().__dir__() + self.__all__
+        return [*super().__dir__(), *self.__all__]
 
     def __getattr__(self, name: str) -> Any:
         if name in self._objects:
