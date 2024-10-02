@@ -53,3 +53,11 @@ def test_imports() -> None:
 
     with pytest.raises(ModuleNotFoundError):
         from test_package import func_of_module_b  # noqa: F401
+
+
+def test_duplicate() -> None:
+    with pytest.raises(ValueError):
+        import test_package_duplicate_1  # noqa: F401
+
+    with pytest.raises(ValueError):
+        import test_package_duplicate_2  # noqa: F401

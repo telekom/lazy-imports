@@ -23,8 +23,52 @@ to publish it as a standalone package.
 
 import importlib
 import os
+from dataclasses import dataclass
 from types import ModuleType
 from typing import Any, Dict, List, Union
+
+
+@dataclass
+class Submodule:
+    """Submodule.
+
+    Example: `from . import types`.
+    """
+
+    def describe(self, key: str):
+        """Describe the object."""
+        return f"submodule {key}"
+
+
+@dataclass
+class FromSubmodule:
+    """Object exported from submodule.
+
+    Example: `from .types import models, BaseModel`.
+    """
+
+    submodule: str
+
+    def describe(self, key: str):
+        """Describe the object."""
+        return f"{key} from submodule {self.submodule}"
+
+
+@dataclass
+class Raw:
+    """Raw object.
+
+    Example: `__version__ = 0.0.1`.
+    """
+
+    value: Any
+
+    def describe(self, key: str):
+        """Describe the object."""
+        return f"extra object {key} of type {type(self.value).__qualname__}"
+
+
+Export = Union[Submodule, FromSubmodule, Raw]
 
 
 class LazyImporter(ModuleType):
@@ -40,14 +84,24 @@ class LazyImporter(ModuleType):
         extra_objects: Union[Dict[str, Any], None] = None,
     ):
         super().__init__(name)
-        self._modules = set(import_structure.keys())
-        self._class_to_module: Dict[str, str] = {}
+        self._exports: Dict[str, Export] = {}
+
+        def safe_insert(key: str, value: Export):
+            if (previous := self._exports.get(key)) is not None:
+                raise ValueError(f"Duplicate symbol: {previous.describe(key)} and {value.describe(key)}")
+            self._exports[key] = value
+
         for key, values in import_structure.items():
+            safe_insert(key, Submodule())
             for value in values:
-                self._class_to_module[value] = key
+                safe_insert(value, FromSubmodule(submodule=key))
+
         self._objects = {} if extra_objects is None else extra_objects
+        for key, value in self._objects.items():
+            safe_insert(key, Raw(value=value))
+
         # Needed for autocompletion in an IDE and wildcard imports (although those won't be lazy)
-        self.__all__ = list(import_structure.keys()) + sum(import_structure.values(), []) + list(self._objects.keys())
+        self.__all__ = [*self._exports.keys()]
         self.__file__ = module_file
         self.__path__ = [os.path.dirname(module_file)]
         self._name = name
@@ -58,15 +112,18 @@ class LazyImporter(ModuleType):
         return [*super().__dir__(), *self.__all__]
 
     def __getattr__(self, name: str) -> Any:
-        if name in self._objects:
-            return self._objects[name]
-        if name in self._modules:
-            value = self._get_module(name)
-        elif name in self._class_to_module:
-            module = self._get_module(self._class_to_module[name])
-            value = getattr(module, name)
-        else:
+        target = self._exports.get(name)
+        if target is None:
             raise AttributeError(f"module {self.__name__} has no attribute {name}")
+
+        if isinstance(target, Submodule):
+            value = self._get_module(name)
+        elif isinstance(target, FromSubmodule):
+            value = getattr(self._get_module(target.submodule), name)
+        elif isinstance(target, Raw):
+            value = target.value
+        else:
+            assert False
 
         setattr(self, name, value)
         return value
