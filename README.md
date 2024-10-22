@@ -29,10 +29,7 @@ installed or which have high load times and/or ressource consumption.
 
 ## Maintainers
 
-[![One Conversation](https://raw.githubusercontent.com/telekom/lazy-imports/main/docs/source/imgs/1c-logo.png)](https://www.welove.ai/)
-<br/>
-This project is maintained by the [One Conversation](https://www.welove.ai/)
-team of [Deutsche Telekom AG](https://www.telekom.com/).
+This project is maintained by a team of [Deutsche Telekom AG](https://www.telekom.com/).
 It is based on
 [`_LazyModule`](https://github.com/huggingface/transformers/blob/e218249b02465ec8b6029f201f2503b9e3b61feb/src/transformers/file_utils.py#L1945)
 from [HuggingFace](https://huggingface.co/) and
