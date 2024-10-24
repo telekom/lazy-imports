@@ -133,7 +133,7 @@ $ make format
 
 ## Style Guidelines
 
-- The code must be compatible with Python 3.6 and higher.
+- The code must be compatible with Python 3.8 and higher.
 - Max line length is 119
 - Docstrings
   - Use the [Google docstring format](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings).
