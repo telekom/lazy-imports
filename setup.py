@@ -21,7 +21,7 @@ import setuptools
 
 
 project_name = "lazy_imports"
-source_code = "https://github.com/telekom/lazy-imports"
+source_code = "https://github.com/bachorp/lazy-imports"
 keywords = "import imports lazy"
 install_requires: List[str] = []
 extras_require = {
@@ -56,9 +56,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name=project_name,
     version=get_version(),
-    maintainer="Philip May",
-    author="Philip May",
-    author_email="philip.may@t-systems.com",
+    maintainer="Pascal Bachor",
+    author="Pascal Bachor",
+    author_email="lazy-imports.vista851@passmail.net",
     description="Tool to support lazy imports",
     long_description=long_description,
     long_description_content_type="text/markdown",
