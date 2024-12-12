@@ -1,13 +1,13 @@
 # Lazy-Imports
 
-[![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
-[![Contributor Covenant](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4.svg)](https://github.com/telekom/lazy-imports/blob/main/CODE_OF_CONDUCT.md)
+[![Apache-2.0 License](https://img.shields.io/github/license/bachorp/lazy-imports)](https://github.com/bachorp/lazy-imports/blob/v1/LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4.svg)](https://github.com/bachorp/lazy-imports/blob/v1/CODE_OF_CONDUCT.md)
 [![Python Version](https://img.shields.io/pypi/pyversions/lazy-imports)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/lazy-imports.svg)](https://pypi.python.org/pypi/lazy-imports)
 <br/>
-[![pytest](https://github.com/telekom/lazy-imports/actions/workflows/pytest.yml/badge.svg)](https://github.com/telekom/lazy-imports/actions/workflows/pytest.yml)
-[![Static Code Checks](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml/badge.svg)](https://github.com/telekom/lazy-imports/actions/workflows/static_checks.yml)
-[![GitHub issues](https://img.shields.io/github/issues-raw/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/issues)
+[![pytest](https://github.com/bachorp/lazy-imports/actions/workflows/pytest.yml/badge.svg)](https://github.com/bachorp/lazy-imports/actions/workflows/pytest.yml)
+[![Static Code Checks](https://github.com/bachorp/lazy-imports/actions/workflows/static_checks.yml/badge.svg)](https://github.com/bachorp/lazy-imports/actions/workflows/static_checks.yml)
+[![GitHub issues](https://img.shields.io/github/issues-raw/bachorp/lazy-imports)](https://github.com/bachorp/lazy-imports/issues)
 
 This is a Python tool to support lazy imports.
 Likewise, the actual initialization of the module does not occur until usage time
@@ -29,7 +29,9 @@ installed or which have high load times and/or ressource consumption.
 
 ## Maintainers
 
-This project is maintained by a team of [Deutsche Telekom AG](https://www.telekom.com/).
+- [Pascal Bachor](https://github.com/bachorp)
+
+This project has previously been maintained by the [One Conversation](https://welove.ai/) team of [Deutsche Telekom AG](https://www.telekom.com/).
 It is based on
 [`_LazyModule`](https://github.com/huggingface/transformers/blob/e218249b02465ec8b6029f201f2503b9e3b61feb/src/transformers/file_utils.py#L1945)
 from [HuggingFace](https://huggingface.co/) and
@@ -123,8 +125,8 @@ def optional_function():  # optional function that uses the optional package
 
 The following channels are available for discussions, feedback, and support requests:
 
-- [open an issue in our GitHub repository](https://github.com/telekom/lazy-imports/issues/new/choose)
-- [send an e-mail to our open source team](mailto:opensource@telekom.de)
+- [open an issue in our GitHub repository](https://github.com/bachorp/lazy-imports/issues/new/choose)
+- [send an e-mail to the maintainers](mailto:lazy-imports.vista851@passmail.net)
 
 ## Reporting Security Vulnerabilities
 
@@ -137,7 +139,7 @@ can be assured, please follow the below guideline.
 GitHub Issues can be publicly seen and therefore would result in a direct disclosure.**
 
 Please address questions about data privacy, security concepts,
-and other media requests to the [opensource@telekom.de](mailto:opensource@telekom.de) mailbox.
+and other media requests to the [lazy-imports.vista851@passmail.net](mailto:lazy-imports.vista851@passmail.net) mailbox.
 
 ## Contribution
 
@@ -146,22 +148,23 @@ parties to contribute and become part of our developer community.
 
 Contribution and feedback is encouraged and always welcome. For more information about how to
 contribute, as well as additional contribution information, see our
-[Contribution Guidelines](https://github.com/telekom/lazy-imports/blob/main/CONTRIBUTING.md).
+[Contribution Guidelines](https://github.com/bachorp/lazy-imports/blob/v1/CONTRIBUTING.md).
 
 ## Code of Conduct
 
 This project has adopted the [Contributor Covenant](https://www.contributor-covenant.org/)
 as our code of conduct. Please see the details in our
-[Contributor Covenant Code of Conduct](https://github.com/telekom/lazy-imports/blob/main/CODE_OF_CONDUCT.md).
+[Contributor Covenant Code of Conduct](https://github.com/bachorp/lazy-imports/blob/v1/CODE_OF_CONDUCT.md).
 All contributors must abide by the code of conduct.
 
 ## Licensing
 
+Copyright (c) 2024 Pascal Bachor<br/>
 Copyright (c) 2021 [Philip May](https://may.la/), [Deutsche Telekom AG](https://www.telekom.com/)<br/>
 Copyright (c) 2020, 2021 [The HuggingFace Team](https://huggingface.co/)<br/>
 Copyright (c) 2018 Preferred Networks, Inc.
 
-Licensed under the [Apache License, Version 2.0](https://github.com/telekom/lazy-imports/blob/main/LICENSE) (the "License");
+Licensed under the [Apache License, Version 2.0](https://github.com/bachorp/lazy-imports/blob/v1/LICENSE) (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
