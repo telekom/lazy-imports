@@ -18,7 +18,7 @@ All members of the project community must abide by the
 [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). Only by respecting each other can we
 develop a productive and collaborative community. Instances of abusive, harassing, or otherwise
 unacceptable behavior may be reported by contacting
-[opensource@telekom.de](mailto:opensource@telekom.de) and/or a [code owner](#code-owners).
+[lazy-imports.vista851@passmail.net](mailto:lazy-imports.vista851@passmail.net) and/or a [code owner](#code-owners).
 
 We appreciate your courtesy of avoiding political questions here. Issues that are not related to
 the project itself will be closed by our community managers.
@@ -110,7 +110,7 @@ To run unit tests locally, ensure that you have installed all relevant requireme
 You will probably want to install it in "editable mode" if you are developing locally.
 
 ```bash
-$ pip install -e .[optional,testing,checking]
+$ pip install -e .[testing,checking]
 ```
 
 Unit tests can then be run as follows:
@@ -144,5 +144,5 @@ $ make format
 
 ## Code Owners
 
-[@PhilipMay](https://github.com/PhilipMay) - code, general documentation, GitHub actions,
+[@bachorp](https://github.com/bachorp) - code, general documentation, GitHub actions,
 everything else
