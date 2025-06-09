@@ -1,8 +1,8 @@
 # Lazy-Imports
 
 > [!CAUTION]
-> This repository is deprecated and should no longer be used. It is replaced by [lazy-imports](https://github.com/bachorp/lazy-imports)
-> from [Pascal Bachor](https://github.com/bachorp).
+> This repository is deprecated and should no longer be used.\
+> It is replaced by [lazy-imports](https://github.com/bachorp/lazy-imports) from [Pascal Bachor](https://github.com/bachorp).
 
 [![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4.svg)](https://github.com/telekom/lazy-imports/blob/main/CODE_OF_CONDUCT.md)
