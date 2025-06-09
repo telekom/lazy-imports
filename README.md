@@ -1,6 +1,6 @@
 # Lazy-Imports
 
-> [!WARNING]
+> [!CAUTION]
 > This repository is deprecated and should no longer be used. It is replaced by [lazy-imports](https://github.com/bachorp/lazy-imports)
 > from [Pascal Bachor](https://github.com/bachorp).
 
