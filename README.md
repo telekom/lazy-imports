@@ -1,6 +1,6 @@
 # Lazy-Imports
 
-This repository is depricated and should no longer be used. It is replaced by [lazy-imports](https://github.com/bachorp/lazy-imports)
+This repository is deprecated and should no longer be used. It is replaced by [lazy-imports](https://github.com/bachorp/lazy-imports)
 from [Pascal Bachor](https://github.com/bachorp).
 
 [![Apache-2.0 License](https://img.shields.io/github/license/telekom/lazy-imports)](https://github.com/telekom/lazy-imports/blob/main/LICENSE)
